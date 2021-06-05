@@ -10,46 +10,46 @@ var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 var lowerArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 // new, empty arrays
-var resultArray = [];
-var userArray = [];
+var array1 = [];
+var array2 = [];
 
 // Prompt and confirmations for user to answer 
   var numCharacter = prompt ("How many characters would you like in your password?");
-  var symbols = confirm ("Would you like special characters in your password?");
-  var numbers = confirm ("Would you like numbers in your password?");
-  var upperCase = confirm ("Would you like UPPERCASE letters in your password?");
-  var lowerCase = confirm ("Would you like lowercase letters in your password?");
+  var symbols = confirm ("Press OK if you would you like special characters in your password.");
+  var numbers = confirm ("Press OK if you would like numbers in your password.");
+  var upperCase = confirm ("Press OK if you would like UPPERCASE letters in your password.");
+  var lowerCase = confirm ("Press OK if you would like lowercase letters in your password.");
 
 
 // use concat method to connect strings and allow user's response to be accounted for 
 
 if (symbols){
-  resultArray = resultArray.concat(symbArray);
+  array1 = array1.concat(symbArray);
   
 }
 
 if (numbers){
-  resultArray = resultArray.concat(numbArray);
+  array1 = array1.concat(numbArray);
 
 }
 
 if (lowerCase){
-  resultArray = resultArray.concat(lowerArray);
+  array1 = array1.concat(lowerArray);
 
 }
 
 if (upperCase){
-  resultArray = resultArray.concat(upperArray);
+  array1 = array1.concat(upperArray);
 }
-console.log(resultArray)
+console.log(array1)
 
 
 for (var i = 0; i < numCharacter; i++) {
       
-  userArray.push (resultArray[Math.floor(Math.random() * resultArray.length)]); 
+  array2.push (array1[Math.floor(Math.random() * array1.length)]); 
   }
 
-  return userArray.join("") ;
+  return array2.join("") ;
 }
 
 // Write password to the #password input
